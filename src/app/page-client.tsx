@@ -59,7 +59,7 @@ function UnitButton(
     const content = (
         <>
             <p>{props.unitNameLong}</p>
-            <p><span>{props.value}</span> <span>{props.unitNameShort}</span></p>
+            <p className="text-xl"><span>{props.value}</span> <span>{props.unitNameShort}</span></p>
         </>
     )
 
