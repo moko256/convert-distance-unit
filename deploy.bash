@@ -1,3 +1,7 @@
+echo "WARNING: This script will force-push to origin/gh-pages."
+echo "Proceed? (Enter to continue / [Ctrl+C] to abort):"
+read
+
 npx next build
 
 tmpdir=$(mktemp -d)
