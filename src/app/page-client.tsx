@@ -31,9 +31,12 @@ export function PageClient() {
         )
     });
 
+    // The <input> has `size` parameter and it affect its minimum size.
+    // It can remove CSS by specifying width/height.
+    // The minimum size parameter doesn't remove it.
     return (
         <div className="w-full h-full flex flex-col gap-4">
-            <input type="text" className='basis-1/3 p-4 text-5xl text-end'
+            <input type="text" className='w-full h-full basis-1/3 p-4 text-5xl text-end'
                 defaultValue={value}
                 onChange={(event) => { updateValue(event.target.value) }} />
 
