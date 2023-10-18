@@ -47,7 +47,13 @@ export function PageClient() {
     <div className="w-full h-full flex flex-col gap-4">
       <input
         type="text"
-        className="w-full h-full basis-1/3 p-4 text-5xl text-end"
+        inputMode="decimal"
+        className="w-full h-full basis-1/3 p-4 text-5xl text-end
+        outline-offset-4
+        border rounded-md border-2 border-blue-100 focus:border-2 focus:border-blue-500
+        bg-white
+        dark:bg-black
+        "
         defaultValue={value}
         onChange={(event) => {
           updateValue(event.target.value);
@@ -80,7 +86,7 @@ function UnitButton(props: {
   if (props.selected) {
     return (
       <button
-        className="border-2 border-blue-500 rounded-md"
+        className="border-2 border-blue-500 rounded-md outline-offset-4"
         onClick={props.onClick}
       >
         {content}
@@ -89,7 +95,7 @@ function UnitButton(props: {
   } else {
     return (
       <button
-        className="border-2 border-blue-200 rounded-md"
+        className="border-2 border-blue-200 rounded-md outline-offset-4"
         onClick={props.onClick}
       >
         {content}
