@@ -13,6 +13,14 @@ mv out $tmpdir
 
 cd $tmpdir/out
 
+# workaround for https://github.com/vercel/next.js/issues/56687
+HTML_FILES=$(find . -type f -name '*.html')
+for f in $HTML_FILES
+do
+	echo "Fixing manifest path: $f"
+    sed -i 's/\/manifest.webmanifest/\/convert-distance-unit\/manifest.webmanifest/g' $f
+done
+
 touch .nojekyll
 
 git init
