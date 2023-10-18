@@ -6,4 +6,9 @@ const nextConfig = {
   basePath: isProd ? "/convert-distance-unit" : undefined,
 };
 
-module.exports = nextConfig;
+const withPWA = require("next-pwa")({
+  dest: "public",
+  reloadOnOnline: false,
+});
+
+module.exports = withPWA(nextConfig);

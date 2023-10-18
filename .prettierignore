@@ -1,6 +1,11 @@
 package-lock.json
 package.json
+
 # Same as .gitignore
+public/sw.js
+public/sw.js.map
+public/workbox*.js
+public/workbox*.js.map
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
