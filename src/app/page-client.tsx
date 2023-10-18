@@ -29,6 +29,7 @@ export function PageClient() {
 
     buttons.push(
       <UnitButton
+        key={unit}
         value={value}
         unitNameShort={unitNameShort}
         unitNameLong={unitNameLong}
@@ -86,6 +87,7 @@ function UnitButton(props: {
   if (props.selected) {
     return (
       <button
+        key={0}
         className="border-2 border-blue-500 rounded-md outline-offset-4"
         onClick={props.onClick}
       >
@@ -95,6 +97,7 @@ function UnitButton(props: {
   } else {
     return (
       <button
+        key={0}
         className="border-2 border-blue-200 rounded-md outline-offset-4"
         onClick={props.onClick}
       >
